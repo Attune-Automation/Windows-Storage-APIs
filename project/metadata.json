@@ -1,6 +1,6 @@
 {
     "externalUuid4": "9136b5c4-6589-40b5-a41e-105be21a58a4", 
-    "key": "windowsstorageapis", 
-    "name": "Windows Storage APIs", 
+    "key": "windowsstoragecmdlets", 
+    "name": "Windows Storage cmdlets", 
     "revision": "145c6dc54454"
 }

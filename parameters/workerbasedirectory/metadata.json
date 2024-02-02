@@ -1,0 +1,7 @@
+{
+    "externalUuid4": "f58a5f5b-02e6-4c21-9b1d-44ab8b23a813", 
+    "key": "workerbasedirectory", 
+    "name": "Worker Base Directory", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}

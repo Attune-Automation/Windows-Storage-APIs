@@ -1,0 +1,17 @@
+$isoFilePath = "{workerBaseDirectory}\kickstart*.iso"
+
+$mountedISO = Mount-DiskImage `
+    -ImagePath (Get-ChildItem `
+    -Path $isoFilePath) `
+    -PassThru
+
+$isoDriveLetter = ($mountedISO | Get-Volume).DriveLetter
+
+$serialNumber = "{diskSerialNumber}"
+
+$disk = Get-Disk -SerialNumber $serialNumber
+
+$usbDriveLetter = (Get-Partition -DiskNumber $disk.Number).DriveLetter
+
+Copy-Item -Path "${isoDriveLetter}:\*" -Destination "${usbDriveLetter}:\" `
+    -Recurse -Force

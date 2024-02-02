@@ -1,0 +1,3 @@
+$isoFilePath = "{workerBaseDirectory}\kickstart*.iso"
+
+Dismount-DiskImage -ImagePath (Get-ChildItem -Path $isoFilePath) -Verbose

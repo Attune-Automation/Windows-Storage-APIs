@@ -1,0 +1,4 @@
+$serialNumber = "{diskSerialNumber}"
+$disk = Get-Disk -SerialNumber $serialNumber
+
+Clear-Disk -Number $disk.Number -RemoveData -Confirm:$false -Verbose

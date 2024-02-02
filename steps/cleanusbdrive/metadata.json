@@ -1,0 +1,16 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "f508b330-a661-4a0f-ad6d-4b66abdbf075", 
+    "interpreter": 2, 
+    "interpreterCommand": "", 
+    "interpreterScriptExt": null, 
+    "interpreterScriptSyntax": "", 
+    "key": "cleanusbdrive", 
+    "name": "Clean USB drive", 
+    "osCredKey": "windowsworkeruseradministrator", 
+    "serverKey": "windowsworker", 
+    "successExitCode": 0, 
+    "timeout": 60, 
+    "type": "com.servertribe.attune.tuples.StepWinRmTuple"
+}

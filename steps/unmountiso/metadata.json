@@ -1,0 +1,16 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "da333716-25b7-47fa-9226-2a18d9f78a3c", 
+    "interpreter": 2, 
+    "interpreterCommand": "", 
+    "interpreterScriptExt": null, 
+    "interpreterScriptSyntax": "", 
+    "key": "unmountiso", 
+    "name": "Unmount ISO", 
+    "osCredKey": "windowsworkeruseradministrator", 
+    "serverKey": "windowsworker", 
+    "successExitCode": 0, 
+    "timeout": 60, 
+    "type": "com.servertribe.attune.tuples.StepWinRmTuple"
+}

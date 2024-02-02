@@ -1,0 +1,16 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "8bea9cce-380c-437c-8c6e-97fc3b3525f3", 
+    "interpreter": 2, 
+    "interpreterCommand": "", 
+    "interpreterScriptExt": null, 
+    "interpreterScriptSyntax": "", 
+    "key": "mountandcopytheisofile", 
+    "name": "Mount and copy the ISO file", 
+    "osCredKey": "windowsworkeruseradministrator", 
+    "serverKey": "windowsworker", 
+    "successExitCode": 0, 
+    "timeout": 180, 
+    "type": "com.servertribe.attune.tuples.StepWinRmTuple"
+}

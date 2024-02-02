@@ -1,0 +1,7 @@
+{
+    "externalUuid4": "af7442b8-426e-4edd-b04f-83ad8bf77dd7", 
+    "key": "diskserialnumber", 
+    "name": "Disk Serial Number", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}

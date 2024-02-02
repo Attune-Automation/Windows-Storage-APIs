@@ -1,0 +1,16 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "6ae1822c-fb0b-4c94-aca6-ba3ce6dd8208", 
+    "interpreter": 2, 
+    "interpreterCommand": "", 
+    "interpreterScriptExt": null, 
+    "interpreterScriptSyntax": "", 
+    "key": "createnewpartition", 
+    "name": "Create new partition", 
+    "osCredKey": "windowsworkeruseradministrator", 
+    "serverKey": "windowsworker", 
+    "successExitCode": 0, 
+    "timeout": 60, 
+    "type": "com.servertribe.attune.tuples.StepWinRmTuple"
+}

@@ -1,0 +1,7 @@
+{
+    "externalUuid4": "9e1f0ef9-90ce-4d68-9f75-be8028c2996b", 
+    "key": "windowsworker", 
+    "name": "Windows Worker", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.WindowsServer"
+}

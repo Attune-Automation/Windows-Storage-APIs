@@ -1,0 +1,32 @@
+{
+    "actionOnStepFail": "stop", 
+    "concurrency": 1, 
+    "enabled": true, 
+    "externalUuid4": "bc67d43e-f3d7-4351-9914-35be729f14a6", 
+    "isBlueprint": true, 
+    "key": "createabootableusb", 
+    "links": [
+        {
+            "order": 0, 
+            "stepKey": "cleanusbdrive"
+        }, 
+        {
+            "order": 50, 
+            "stepKey": "createnewpartition"
+        }, 
+        {
+            "order": 100, 
+            "stepKey": "formattheparition"
+        }, 
+        {
+            "order": 150, 
+            "stepKey": "mountandcopytheisofile"
+        }, 
+        {
+            "order": 200, 
+            "stepKey": "unmountiso"
+        }
+    ], 
+    "name": "Create a bootable usb", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

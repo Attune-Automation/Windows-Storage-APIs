@@ -1,0 +1,6 @@
+$serialNumber = "{diskSerialNumber}"
+$disk = Get-Disk -SerialNumber $serialNumber
+
+$usbDriveLetter = (Get-Partition -DiskNumber $disk.Number).DriveLetter
+
+Format-Volume -DriveLetter $usbDriveLetter -FileSystem FAT32

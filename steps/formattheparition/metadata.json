@@ -1,0 +1,16 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "2d910ac8-e714-489b-a680-f4459dfdff38", 
+    "interpreter": 2, 
+    "interpreterCommand": "", 
+    "interpreterScriptExt": null, 
+    "interpreterScriptSyntax": "", 
+    "key": "formattheparition", 
+    "name": "Format the parition", 
+    "osCredKey": "windowsworkeruseradministrator", 
+    "serverKey": "windowsworker", 
+    "successExitCode": 0, 
+    "timeout": 60, 
+    "type": "com.servertribe.attune.tuples.StepWinRmTuple"
+}

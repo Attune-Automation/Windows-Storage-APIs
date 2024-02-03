@@ -392,7 +392,10 @@ mstsc /admin /v:{windowsworker}
 $serialNumber = &quot;{diskSerialNumber}&quot;
 $disk = Get-Disk -SerialNumber $serialNumber
 
-Clear-Disk -Number $disk.Number -RemoveData -Confirm:$false -Verbose
+Clear-Disk -Number $disk.Number `
+    -RemoveData `
+    -Confirm:$false `
+    -Verbose
                 </code>
             </pre>
         </div>
@@ -449,7 +452,8 @@ Clear-Disk -Number $disk.Number -RemoveData -Confirm:$false -Verbose
 $serialNumber = &quot;{diskSerialNumber}&quot;
 $disk = Get-Disk -SerialNumber $serialNumber
 
-New-Partition -DiskNumber $disk.Number -Size 32GB `
+New-Partition -DiskNumber $disk.Number `
+    -Size 32GB `
     -GptType &quot;{ebd0a0a2-b9e5-4433-87c0-68b6b72699c7}&quot; `
     -AssignDriveLetter
                 </code>
@@ -510,7 +514,8 @@ $disk = Get-Disk -SerialNumber $serialNumber
 
 $usbDriveLetter = (Get-Partition -DiskNumber $disk.Number).DriveLetter
 
-Format-Volume -DriveLetter $usbDriveLetter -FileSystem FAT32
+Format-Volume -DriveLetter $usbDriveLetter `
+    -FileSystem FAT32
                 </code>
             </pre>
         </div>
@@ -564,22 +569,20 @@ Format-Volume -DriveLetter $usbDriveLetter -FileSystem FAT32
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-$isoFilePath = &quot;{workerBaseDirectory}\kickstart*.iso&quot;
-
-$mountedISO = Mount-DiskImage `
-    -ImagePath (Get-ChildItem `
-    -Path $isoFilePath) `
-    -PassThru
-
-$isoDriveLetter = ($mountedISO | Get-Volume).DriveLetter
-
+$imageFilePath = &quot;{workerBaseDirectory}\kickstart*.iso&quot;
 $serialNumber = &quot;{diskSerialNumber}&quot;
 
+$mountedImage = Mount-DiskImage `
+    -ImagePath (Get-ChildItem -Path $imageFilePath) `
+    -PassThru
+
+$imageDriveLetter = ($mountedImage | Get-Volume).DriveLetter
+
 $disk = Get-Disk -SerialNumber $serialNumber
+$diskDriveLetter = (Get-Partition -DiskNumber $disk.Number).DriveLetter
 
-$usbDriveLetter = (Get-Partition -DiskNumber $disk.Number).DriveLetter
-
-Copy-Item -Path &quot;${isoDriveLetter}:\*&quot; -Destination &quot;${usbDriveLetter}:\&quot; `
+Copy-Item -Path &quot;${imageDriveLetter}:\*&quot; `
+    -Destination &quot;${diskDriveLetter}:\&quot; `
     -Recurse -Force
                 </code>
             </pre>
@@ -636,7 +639,8 @@ Copy-Item -Path &quot;${isoDriveLetter}:\*&quot; -Destination &quot;${usbDriveLe
                 <code class="language-sql py-0">
 $isoFilePath = &quot;{workerBaseDirectory}\kickstart*.iso&quot;
 
-Dismount-DiskImage -ImagePath (Get-ChildItem -Path $isoFilePath) -Verbose
+Dismount-DiskImage -ImagePath (Get-ChildItem -Path $isoFilePath) `
+    -Verbose
                 </code>
             </pre>
         </div>

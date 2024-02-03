@@ -1,16 +1,16 @@
 {
     "actionOnStepFail": null, 
     "enabled": true, 
-    "externalUuid4": "2d910ac8-e714-489b-a680-f4459dfdff38", 
+    "externalUuid4": "8bea9cce-380c-437c-8c6e-97fc3b3525f3", 
     "interpreter": 2, 
     "interpreterCommand": "", 
     "interpreterScriptExt": null, 
     "interpreterScriptSyntax": "", 
-    "key": "formattheparition", 
-    "name": "Format the parition", 
+    "key": "mountdiskimageandcopytodisk", 
+    "name": "Mount disk image and copy to disk", 
     "osCredKey": "windowsworkeruseradministrator", 
     "serverKey": "windowsworker", 
     "successExitCode": 0, 
-    "timeout": 60, 
+    "timeout": 180, 
     "type": "com.servertribe.attune.tuples.StepWinRmTuple"
 }

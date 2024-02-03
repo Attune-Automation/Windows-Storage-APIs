@@ -54,7 +54,7 @@ This Project contains the following Blueprints.
 
 
 
-### Create a bootable usb
+### Create a bootable disk
 
 
 

@@ -4,11 +4,11 @@
     "enabled": true, 
     "externalUuid4": "bc67d43e-f3d7-4351-9914-35be729f14a6", 
     "isBlueprint": true, 
-    "key": "createabootableusb", 
+    "key": "createabootabledisk", 
     "links": [
         {
             "order": 0, 
-            "stepKey": "cleanusbdrive"
+            "stepKey": "cleardisk"
         }, 
         {
             "order": 50, 
@@ -16,17 +16,17 @@
         }, 
         {
             "order": 100, 
-            "stepKey": "formattheparition"
+            "stepKey": "formatvolume"
         }, 
         {
             "order": 150, 
-            "stepKey": "mountandcopytheisofile"
+            "stepKey": "mountdiskimageandcopytodisk"
         }, 
         {
             "order": 200, 
-            "stepKey": "unmountiso"
+            "stepKey": "dismountdiskimage"
         }
     ], 
-    "name": "Create a bootable usb", 
+    "name": "Create a bootable disk", 
     "type": "com.servertribe.attune.tuples.StepGroupTuple"
 }

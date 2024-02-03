@@ -9,7 +9,7 @@
 
 # Windows Storage cmdlets
 
-
+Work with Windows Storage Management processes.
 
 
 
@@ -65,10 +65,10 @@ This Project contains the following Blueprints.
 
 | Name | Type | Script Reference | Comment |
 | ---- | ---- | ---------------- | ------- |
+| Disk Serial Number | Text | `diskserialnumber` |  |
 | Windows Worker | Windows Node | `windowsworker` |  |
 | Windows Worker User: Administrator | Windows Credential | `windowsworkeruseradministrator` |  |
 | Worker Base Directory | Text | `workerbasedirectory` |  |
-| Disk Serial Number | Text | `diskserialnumber` |  |
 
 
 

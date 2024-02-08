@@ -1,0 +1,1 @@
+Use the `Get-Disk` cmdlet to get the Disk Serial Number.

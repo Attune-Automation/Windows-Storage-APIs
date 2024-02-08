@@ -370,7 +370,7 @@ tool for IT professionals and end-users alike.</p>
                     <div class="row">
                         <div class="description col px-0">
                             <p>
-                                
+                                <p>Retrieve the disk by its serial number and clear all data from the disk.</p>
                             </p>
                         </div>
                     </div>
@@ -447,7 +447,9 @@ Clear-Disk -Number $disk.Number `
                     <div class="row">
                         <div class="description col px-0">
                             <p>
-                                
+                                <p>Retrieve the disk by its serial number, then create a new partition with a 
+size of 32GB, specify the partition type as GPT for a basic data partition, 
+and automatically assign a drive letter to the newly created partition.</p>
                             </p>
                         </div>
                     </div>
@@ -507,7 +509,8 @@ New-Partition -DiskNumber $disk.Number `
                     <div class="row">
                         <div class="description col px-0">
                             <p>
-                                
+                                <p>Identify the disk by its serial number, finds the drive letter of its 
+partition, and then format the volume using the FAT32 file system.</p>
                             </p>
                         </div>
                     </div>
@@ -567,7 +570,9 @@ Format-Volume -DriveLetter $usbDriveLetter `
                     <div class="row">
                         <div class="description col px-0">
                             <p>
-                                
+                                <p>Mount the ISO image file, then identify the disk by its serial number. Copy 
+all contents from the mounted ISO image to the target disk, overwriting 
+any existing files.</p>
                             </p>
                         </div>
                     </div>
@@ -635,7 +640,7 @@ Copy-Item -Path &quot;${imageDriveLetter}:\*&quot; `
                     <div class="row">
                         <div class="description col px-0">
                             <p>
-                                
+                                <p>Unmount the ISO image file.</p>
                             </p>
                         </div>
                     </div>

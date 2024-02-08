@@ -1,0 +1,1 @@
+Retrieve the disk by its serial number and clear all data from the disk.

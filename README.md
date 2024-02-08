@@ -9,9 +9,13 @@
 
 # Windows Storage cmdlets
 
-Work with Windows Storage Management processes.
+Work with Windows Storage Management PowerShell cmdlets to provide an 
+advanced, user-friendly interface for managing storage resources in 
+Windows environments.
 
-[Windows Storage Management-specific cmdlets](https://learn.microsoft.com/en-us/powershell/module/storage/?view=windowsserver2022-ps).
+[Windows Storage Management-specific cmdlets](https://learn.microsoft.com/en-us/powershell/module/storage/?view=windowsserver2022-ps)
+
+[GitHub Project](https://github.com/Attune-Automation/Windows-Storage-cmdlets)
 
 
 
@@ -74,10 +78,10 @@ tool for IT professionals and end-users alike.
 
 | Name | Type | Script Reference | Comment |
 | ---- | ---- | ---------------- | ------- |
-| Disk Serial Number | Text | `diskserialnumber` |  |
 | Windows Worker | Windows Node | `windowsworker` |  |
 | Windows Worker User: Administrator | Windows Credential | `windowsworkeruseradministrator` |  |
 | Worker Base Directory | Text | `workerbasedirectory` |  |
+| Disk Serial Number | Text | `diskserialnumber` | Use the `Get-Disk` cmdlet to get the Disk Serial Number. |
 
 
 

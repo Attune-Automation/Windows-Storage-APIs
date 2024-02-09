@@ -81,7 +81,7 @@ tool for IT professionals and end-users alike.
 | Windows Worker | Windows Node | `windowsworker` |  |
 | Windows Worker User: Administrator | Windows Credential | `windowsworkeruseradministrator` |  |
 | Worker Base Directory | Text | `workerbasedirectory` |  |
-| Disk Serial Number | Text | `diskserialnumber` | Use the `Get-Disk` cmdlet to get the Disk Serial Number. |
+| Disk Serial Number | Text | `diskserialnumber` | Use the `Get-Disk` cmdlet to get the Disk Serial Number.<br><br>[Get-Disk documentation](https://learn.microsoft.com/en-us/powershell/module/storage/get-disk?view=windowsserver2022-ps) |
 
 
 

@@ -371,6 +371,8 @@ tool for IT professionals and end-users alike.</p>
                         <div class="description col px-0">
                             <p>
                                 <p>Retrieve the disk by its serial number and clear all data from the disk.</p>
+<p><a href="https://learn.microsoft.com/en-us/powershell/module/storage/get-disk">Get-Disk documentation</a></p>
+<p><a href="https://learn.microsoft.com/en-us/powershell/module/storage/clear-disk">Clear-Disk documentation</a></p>
                             </p>
                         </div>
                     </div>
@@ -450,6 +452,7 @@ Clear-Disk -Number $disk.Number `
                                 <p>Retrieve the disk by its serial number, then create a new partition with a 
 size of 32GB, specify the partition type as GPT for a basic data partition, 
 and automatically assign a drive letter to the newly created partition.</p>
+<p><a href="https://learn.microsoft.com/en-us/powershell/module/storage/new-partition">New-Partition documentation</a></p>
                             </p>
                         </div>
                     </div>
@@ -511,6 +514,8 @@ New-Partition -DiskNumber $disk.Number `
                             <p>
                                 <p>Identify the disk by its serial number, finds the drive letter of its 
 partition, and then format the volume using the FAT32 file system.</p>
+<p><a href="https://learn.microsoft.com/en-us/powershell/module/storage/get-partition">Get-Partition documentation</a></p>
+<p><a href="https://learn.microsoft.com/en-us/powershell/module/storage/format-volume">Format-Volume documentation</a></p>
                             </p>
                         </div>
                     </div>
@@ -573,6 +578,7 @@ Format-Volume -DriveLetter $usbDriveLetter `
                                 <p>Mount the ISO image file, then identify the disk by its serial number. Copy 
 all contents from the mounted ISO image to the target disk, overwriting 
 any existing files.</p>
+<p><a href="https://learn.microsoft.com/en-us/powershell/module/storage/mount-diskimage">Mount-DiskImage documentation</a></p>
                             </p>
                         </div>
                     </div>
@@ -641,6 +647,7 @@ Copy-Item -Path &quot;${imageDriveLetter}:\*&quot; `
                         <div class="description col px-0">
                             <p>
                                 <p>Unmount the ISO image file.</p>
+<p><a href="https://learn.microsoft.com/en-us/powershell/module/storage/dismount-diskimage">Dismount-Diskmage</a></p>
                             </p>
                         </div>
                     </div>

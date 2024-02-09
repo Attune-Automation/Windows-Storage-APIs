@@ -3,13 +3,17 @@ $serialNumber = "{diskSerialNumber}"
 
 $mountedImage = Mount-DiskImage `
     -ImagePath (Get-ChildItem -Path $imageFilePath) `
-    -PassThru
+    -PassThru `
+    -Verbose
 
 $imageDriveLetter = ($mountedImage | Get-Volume).DriveLetter
 
 $disk = Get-Disk -SerialNumber $serialNumber
 $diskDriveLetter = (Get-Partition -DiskNumber $disk.Number).DriveLetter
 
-Copy-Item -Path "${imageDriveLetter}:\*" `
+Copy-Item `
+    -Path "${imageDriveLetter}:\*" `
     -Destination "${diskDriveLetter}:\" `
-    -Recurse -Force
+    -Recurse `
+    -Force `
+    -Verbose

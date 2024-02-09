@@ -421,10 +421,19 @@ mstsc /admin /v:{windowsworker}
 $serialNumber = &quot;{diskSerialNumber}&quot;
 $disk = Get-Disk -SerialNumber $serialNumber
 
+# Clear the disk
 Clear-Disk -Number $disk.Number `
     -RemoveData `
     -Confirm:$false `
     -Verbose
+
+# Verify the disk is clean
+if ($disk.NumberOfPartitions -eq 0) {
+    Write-Host &quot;Disk is clean.&quot;
+} else {
+    Write-Host &quot;Disk is not clean.&quot;
+    exit 1
+}
                 </code>
             </pre>
         </div>
@@ -612,16 +621,20 @@ $serialNumber = &quot;{diskSerialNumber}&quot;
 
 $mountedImage = Mount-DiskImage `
     -ImagePath (Get-ChildItem -Path $imageFilePath) `
-    -PassThru
+    -PassThru `
+    -Verbose
 
 $imageDriveLetter = ($mountedImage | Get-Volume).DriveLetter
 
 $disk = Get-Disk -SerialNumber $serialNumber
 $diskDriveLetter = (Get-Partition -DiskNumber $disk.Number).DriveLetter
 
-Copy-Item -Path &quot;${imageDriveLetter}:\*&quot; `
+Copy-Item `
+    -Path &quot;${imageDriveLetter}:\*&quot; `
     -Destination &quot;${diskDriveLetter}:\&quot; `
-    -Recurse -Force
+    -Recurse `
+    -Force `
+    -Verbose
                 </code>
             </pre>
         </div>

@@ -426,14 +426,6 @@ Clear-Disk -Number $disk.Number `
     -RemoveData `
     -Confirm:$false `
     -Verbose
-
-# Verify the disk is clean
-if ($disk.NumberOfPartitions -eq 0) {
-    Write-Host &quot;Disk is clean.&quot;
-} else {
-    Write-Host &quot;Disk is not clean.&quot;
-    exit 1
-}
                 </code>
             </pre>
         </div>
